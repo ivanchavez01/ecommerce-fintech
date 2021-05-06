@@ -159,7 +159,7 @@ class CartTest extends TestCase
 
         $cart->removeProduct(new ProductId(1));
 
-        $this->assertTrue($cart->cartItems() == 1);
+        $this->assertTrue(count($cart->cartItems()) == 1);
     }
 
     public function test_clear_cart()
