@@ -13,7 +13,7 @@ class Cart
 
     public function __construct(User $user, array $cartItems = [])
     {
-        $this->fillCartItems($this->cartItems);
+        $this->fillCartItems($cartItems);
         $this->user = $user;
     }
 
