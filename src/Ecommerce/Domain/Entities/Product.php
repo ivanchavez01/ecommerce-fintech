@@ -1,22 +1,25 @@
 <?php
 namespace Soft\Ecommerce\Domain\Entities;
 
+use Soft\Ecommerce\Domain\ObjectValues\ProductId;
 use Soft\Ecommerce\Domain\ObjectValues\Shipping;
 
 class Product
 {
-    protected int $id;
     protected string $name;
     protected string $image;
     protected Category $category;
     protected Brand $brand;
-    protected float $quantity;
+    protected float $stock = 0;
 
     protected Shipping $shipping;
+    protected ProductId $productId;
+    protected float $price;
 
-    public function __construct(string $name, Category $category, Brand $brand, float $quantity)
+    public function __construct(ProductId $productId, string $name, Category $category, Brand $brand, float $price)
     {
-        $this->quantity = $quantity;
+        $this->price = $price;
+        $this->id = $productId;
         $this->brand = $brand;
         $this->category = $category;
         $this->name = $name;
@@ -30,5 +33,10 @@ class Product
     public function setShipping(Shipping $shipping)
     {
         $this->shipping = $shipping;
+    }
+
+    public function id(): ProductId
+    {
+        return $this->productId;
     }
 }

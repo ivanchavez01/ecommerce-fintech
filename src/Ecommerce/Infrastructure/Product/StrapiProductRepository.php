@@ -1,12 +1,11 @@
 <?php
-namespace Soft\Ecommerce\Infrastructure;
+namespace Soft\Ecommerce\Infrastructure\Product;
 
 use Soft\Ecommerce\Domain\Entities\Product;
 use Soft\Ecommerce\Domain\Entities\Warehouse;
 
-class ElasticSearchProductRepository implements ProductRepository
+class StrapiProductRepository implements ProductRepository
 {
-
     public function create(Product $product): Product
     {
         // TODO: Implement create() method.
@@ -17,7 +16,7 @@ class ElasticSearchProductRepository implements ProductRepository
         // TODO: Implement find() method.
     }
 
-    public function search($productId, array $filters): array
+    public function search(string $q, array $filters): array
     {
         // TODO: Implement search() method.
     }

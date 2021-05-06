@@ -1,5 +1,5 @@
 <?php
-namespace Soft\Ecommerce\Infrastructure;
+namespace Soft\Ecommerce\Infrastructure\Product;
 
 use Soft\Ecommerce\Domain\Entities\Product;
 use Soft\Ecommerce\Domain\Entities\Warehouse;
