@@ -19,7 +19,7 @@ class Product
     public function __construct(ProductId $productId, string $name, Category $category, Brand $brand, float $price)
     {
         $this->price = $price;
-        $this->id = $productId;
+        $this->productId = $productId;
         $this->brand = $brand;
         $this->category = $category;
         $this->name = $name;
