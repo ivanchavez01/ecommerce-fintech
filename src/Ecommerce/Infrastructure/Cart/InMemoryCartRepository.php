@@ -6,6 +6,7 @@ namespace Soft\Ecommerce\Infrastructure\Cart;
 
 use Soft\Ecommerce\Domain\Entities\Cart;
 use Soft\Ecommerce\Domain\Entities\CartItem;
+use Soft\Ecommerce\Domain\ObjectValues\ProductId;
 use Soft\Ecommerce\Domain\ObjectValues\UserId;
 use Soft\Ecommerce\Infrastructure\User\InMemoryUserRepository;
 
@@ -16,9 +17,10 @@ class InMemoryCartRepository implements CartRepository
         return $cart;
     }
 
-    public function addItem(CartItem $cartItem): Cart
+    public function addItem(Cart $cart, CartItem $cartItem): Cart
     {
-        // TODO: Implement addItem() method.
+         $cart->addCartItem($cartItem);
+         return $cart;
     }
 
     public function findByUserId(UserId $userId): Cart
@@ -27,5 +29,23 @@ class InMemoryCartRepository implements CartRepository
         $user = $userRepository->find($userId);
 
         return new Cart($user);
+    }
+
+    public function addQuantityToCardItem(Cart $cart, ProductId $productId, float $quantity): Cart
+    {
+        $cart->addQuantity($productId, $quantity);
+        return $cart;
+    }
+
+    public function removeCartItem(Cart $cart, ProductId $productId): Cart
+    {
+        $cart->removeProduct($productId);
+        return $cart;
+    }
+
+    public function clearCart(Cart $cart): Cart
+    {
+        $cart->clear();
+        return $cart;
     }
 }

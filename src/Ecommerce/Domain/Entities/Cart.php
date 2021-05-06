@@ -17,6 +17,15 @@ class Cart
         $this->user = $user;
     }
 
+    public function getCartItem(ProductId $productId): ?CartItem
+    {
+        if($this->hasProduct($productId)) {
+            return $this->cartItemIndexByProductId[$productId->value()];
+        }
+
+        return null;
+    }
+
     public function addCartItem(CartItem $cartItem): CartItem
     {
         if($this->hasProduct($cartItem->product()->id())) {
@@ -28,19 +37,19 @@ class Cart
         return $cartItem;
     }
 
-    public function addQuantity(ProductId $id, float $quantity): ?CartItem
+    public function addQuantity(ProductId $productId, float $quantity): ?CartItem
     {
-        if(isset($this->cartItemIndexByProductId[$id->value()])) {
-            $this->cartItemIndexByProductId[$id->value()]->addQuantity($quantity);
-            return $this->cartItemIndexByProductId[$id->value()];
+        if(isset($this->cartItemIndexByProductId[$productId->value()])) {
+            $this->cartItemIndexByProductId[$productId->value()]->addQuantity($quantity);
+            return $this->cartItemIndexByProductId[$productId->value()];
         }
 
         return null;
     }
 
-    private function hasProduct(ProductId $id): bool
+    private function hasProduct(ProductId $productId): bool
     {
-        return isset($this->cartItemIndexByProductId[$id->value()]);
+        return isset($this->cartItemIndexByProductId[$productId->value()]);
     }
 
     public function cartItems(): array
