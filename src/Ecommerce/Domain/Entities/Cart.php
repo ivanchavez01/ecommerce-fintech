@@ -32,6 +32,7 @@ class Cart
     {
         if(isset($this->cartItemIndexByProductId[$id->value()])) {
             $this->cartItemIndexByProductId[$id->value()]->addQuantity($quantity);
+            return $this->cartItemIndexByProductId[$id->value()];
         }
 
         return null;
