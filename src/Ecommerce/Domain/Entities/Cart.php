@@ -20,7 +20,7 @@ class Cart
     public function addCartItem(CartItem $cartItem): CartItem
     {
         if($this->hasProduct($cartItem->product()->id())) {
-            $this->addQuantity($cartItem->product()->id(), 1);
+            return $this->addQuantity($cartItem->product()->id(), 1);
         }
 
         $this->cartItemIndexByProductId[$cartItem->product()->id()->value()] = $cartItem;
