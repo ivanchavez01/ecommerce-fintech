@@ -30,6 +30,7 @@ class ProductTest extends TestCase
         $this->assertTrue(true);
     }
 
+
     public function test_update_product()
     {
         $updateProduct = new ProductUpdate(new InMemoryProductRepository());
