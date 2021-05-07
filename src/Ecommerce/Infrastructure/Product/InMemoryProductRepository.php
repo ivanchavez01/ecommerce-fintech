@@ -4,29 +4,61 @@
 namespace Soft\Ecommerce\Infrastructure\Product;
 
 
+use Soft\Ecommerce\Domain\Entities\Brand;
+use Soft\Ecommerce\Domain\Entities\Category;
 use Soft\Ecommerce\Domain\Entities\Product;
 use Soft\Ecommerce\Domain\Entities\Warehouse;
+use Soft\Ecommerce\Domain\ObjectValues\ProductId;
 
 class InMemoryProductRepository implements ProductRepository
 {
-
     public function create(Product $product): Product
     {
-        // TODO: Implement create() method.
+        return $product;
     }
 
     public function find($productId): Product
     {
-        // TODO: Implement find() method.
+        return new Product(
+            new ProductId(1),
+            "Laptop 16\" Dell NV250",
+            new Category(),
+            new Brand(),
+            5000
+        );
     }
 
     public function search(string $q, array $filters): array
     {
-        // TODO: Implement search() method.
+        return [
+            new Product(
+                new ProductId(1),
+                "Laptop 16\" Dell NV250",
+                new Category(),
+                new Brand(),
+                5000
+            )
+        ];
     }
 
     public function addStock(int $productId, Warehouse $warehouse, float $stock): Product
     {
-        // TODO: Implement addStock() method.
+        return new Product(
+            new ProductId(1),
+            "Laptop 16\" Dell NV250",
+            new Category(),
+            new Brand(),
+            5000
+        );
+    }
+
+    public function update(ProductId $productId, Product $product): Product
+    {
+        return $product;
+    }
+
+    public function delete(ProductId $productId): bool
+    {
+        return true;
     }
 }
