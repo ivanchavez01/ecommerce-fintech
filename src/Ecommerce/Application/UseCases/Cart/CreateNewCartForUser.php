@@ -5,8 +5,8 @@ namespace Soft\Ecommerce\Application\UseCases\Cart;
 
 
 use Soft\Ecommerce\Domain\Entities\Cart;
-use Soft\Ecommerce\Infrastructure\Cart\CartRepository;
-use Soft\Ecommerce\Infrastructure\User\UserRepository;
+use Soft\Ecommerce\Domain\Repositories\CartRepository;
+use Soft\Ecommerce\Domain\Repositories\UserRepository;
 use Soft\Fintech\Wallet\Domain\Entities\User;
 
 class CreateNewCartForUser

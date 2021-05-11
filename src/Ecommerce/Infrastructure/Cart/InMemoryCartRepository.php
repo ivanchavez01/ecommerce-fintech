@@ -8,6 +8,7 @@ use Soft\Ecommerce\Domain\Entities\Cart;
 use Soft\Ecommerce\Domain\Entities\CartItem;
 use Soft\Ecommerce\Domain\ObjectValues\ProductId;
 use Soft\Ecommerce\Domain\ObjectValues\UserId;
+use Soft\Ecommerce\Domain\Repositories\CartRepository;
 use Soft\Ecommerce\Infrastructure\User\InMemoryUserRepository;
 
 class InMemoryCartRepository implements CartRepository

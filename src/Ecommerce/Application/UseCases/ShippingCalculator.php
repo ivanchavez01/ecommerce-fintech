@@ -1,5 +1,7 @@
 <?php
-namespace Soft\Ecommerce\Application\UseCase;
+namespace Soft\Ecommerce\Application\UseCases;
+
+use Soft\Ecommerce\Domain\Entities\Cart;
 
 class ShippingCalculator
 {

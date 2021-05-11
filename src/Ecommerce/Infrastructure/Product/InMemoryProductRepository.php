@@ -9,6 +9,7 @@ use Soft\Ecommerce\Domain\Entities\Category;
 use Soft\Ecommerce\Domain\Entities\Product;
 use Soft\Ecommerce\Domain\Entities\Warehouse;
 use Soft\Ecommerce\Domain\ObjectValues\ProductId;
+use Soft\Ecommerce\Domain\Repositories\ProductRepository;
 
 class InMemoryProductRepository implements ProductRepository
 {

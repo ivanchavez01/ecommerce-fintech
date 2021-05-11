@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Soft\Ecommerce\Infrastructure\User;
+namespace Soft\Ecommerce\Domain\Repositories;
 
 
 use Soft\Ecommerce\Domain\ObjectValues\UserId;

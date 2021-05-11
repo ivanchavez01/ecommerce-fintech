@@ -1,5 +1,5 @@
 <?php
-namespace Soft\Ecommerce\Infrastructure\Cart;
+namespace Soft\Ecommerce\Domain\Repositories;
 
 use Soft\Ecommerce\Domain\Entities\Cart;
 use Soft\Ecommerce\Domain\Entities\CartItem;
