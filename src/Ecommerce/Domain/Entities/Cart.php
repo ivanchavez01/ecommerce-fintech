@@ -3,10 +3,10 @@ namespace Soft\Ecommerce\Domain\Entities;
 
 use Soft\Ecommerce\Domain\ObjectValues\ProductId;
 use Soft\Fintech\Wallet\Domain\Entities\User;
+use Soft\SeedWork\Entity;
 
-class Cart
+class Cart extends Entity
 {
-    protected int $id;
     protected User $user;
     /** @var \Soft\Ecommerce\Domain\Entities\CartItem[] */
     private array $cartItemIndexByProductId = [];

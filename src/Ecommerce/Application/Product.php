@@ -3,8 +3,8 @@
 namespace Soft\Ecommerce\Application;
 
 use Soft\Ecommerce\Domain\Entities\Warehouse;
-use Soft\Ecommerce\Infrastructure\ProductRepository;
 use Soft\Ecommerce\Domain\Entities\Product as ProductEntity;
+use Soft\Ecommerce\Domain\Repositories\ProductRepository;
 
 class Product
 {

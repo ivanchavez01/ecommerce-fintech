@@ -6,7 +6,7 @@ namespace Soft\Ecommerce\Application\UseCases\Cart;
 
 use Soft\Ecommerce\Domain\Entities\Cart;
 use Soft\Ecommerce\Domain\ObjectValues\ProductId;
-use Soft\Ecommerce\Infrastructure\Cart\CartRepository;
+use Soft\Ecommerce\Domain\Repositories\CartRepository;
 
 class RemoveOneCartItem
 {

@@ -4,7 +4,7 @@
 namespace Soft\Ecommerce\Application\UseCases\Product;
 
 
-use Soft\Ecommerce\Infrastructure\Product\ProductRepository;
+use Soft\Ecommerce\Domain\Repositories\ProductRepository;
 
 class SearchProducts
 {
