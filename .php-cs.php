@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-require(".php-cs-base.php");
 /*
  * This file is part of PHP CS Fixer.
  *
@@ -41,8 +40,6 @@ $config = new PhpCsFixer\Config();
 $config
     ->setRiskyAllowed(true)
     ->setRules([
-        '@PSR1' => true,
-        '@PSR2' => true,
         '@PSR12' => true,
         '@PHP71Migration' => true,
         '@PHP71Migration:risky' => true,
