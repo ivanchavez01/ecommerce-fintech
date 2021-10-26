@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-require(".php-cs-base.php");
 /*
  * This file is part of PHP CS Fixer.
  *
