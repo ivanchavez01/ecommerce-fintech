@@ -39,9 +39,6 @@ $config = new PhpCsFixer\Config();
 $config
     ->setRiskyAllowed(true)
     ->setRules([
-        '@PSR1' => true,
-        '@PSR2' => true,
-        '@PSR12' => true,
         '@PHP71Migration' => true,
         '@PHP71Migration:risky' => true,
         '@PHPUnit75Migration:risky' => true,
